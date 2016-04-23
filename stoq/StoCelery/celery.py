@@ -1,0 +1,9 @@
+from __future__ import absolute_import
+from celery import Celery
+from StoCelery import celeryconfig
+
+app = Celery('StoCelery')
+app.config_from_object(celeryconfig)
+
+if __name__ == '__main__':
+    app.start()
